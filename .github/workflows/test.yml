@@ -17,6 +17,7 @@ jobs:
         run: npm test
         working-directory: second-project
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: get code
